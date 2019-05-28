@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*
     Given a character pointer x (that points to an array of chars), and a
@@ -15,7 +16,11 @@
 */
 void string_copy(char *x, char *y)
 {
-
+	int len = strlen(y);
+	for (int i = 0; i < len; i++) {
+		x[i] = y[i];
+	}
+	x[len + 1] = '\0';
 }
 
 /*
@@ -28,7 +33,13 @@ void string_copy(char *x, char *y)
 */
 char *find_char(char *str, int c)
 {
+	for (int i = 0; i < strlen(str); i++) {
+		if (str[i] == c) {
+			return &str[i];
+		}
+	}
 
+	return str;
 }
 
 /*

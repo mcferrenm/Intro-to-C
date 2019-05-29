@@ -20,7 +20,7 @@ void string_copy(char *x, char *y)
 	for (int i = 0; i < len; i++) {
 		x[i] = y[i];
 	}
-	x[len + 1] = '\0';
+	x[len] = '\0';
 }
 
 /*
@@ -39,7 +39,7 @@ char *find_char(char *str, int c)
 		}
 	}
 
-	return str;
+	return NULL;
 }
 
 /*

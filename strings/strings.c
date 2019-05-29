@@ -32,7 +32,7 @@ char *reverse_string(char *rv, char *s)
 		rv[counter] = s[i];
 		counter += 1;
 	}
-	rv[string_length(s) + 1] = '\0';
+	rv[string_length(s)] = '\0';
 	return rv;
 }
 

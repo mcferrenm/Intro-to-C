@@ -37,6 +37,7 @@ char *test_mem_copy()
     return NULL;
 }
 
+
 char *test_resize_memory()
 {
     char *url = strdup("http://lambdaschool.com");
@@ -65,6 +66,8 @@ char *test_resize_memory()
     return NULL;
 }
 
+
+
 char *all_tests()
 {
     mu_suite_start();
@@ -72,7 +75,7 @@ char *all_tests()
     mu_run_test(test_string_dup);
     mu_run_test(test_mem_copy);
     mu_run_test(test_resize_memory);
-    
+
     return NULL;
 }
 

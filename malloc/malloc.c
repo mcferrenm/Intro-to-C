@@ -34,7 +34,7 @@ void mem_copy(void *dest, const void *src, int n)
     char *d = (char *)dest;
     
     for (int i = 0; i < n; i++) {
-      d[i] = s[i];
+        d[i] = s[i];
     }
 }
 
@@ -49,9 +49,18 @@ void mem_copy(void *dest, const void *src, int n)
     
     Do not use the `realloc` function from the standard libary.
 */
+
 void *resize_memory(void *ptr, int old_size, int new_size)
 {
-
+  char *p_url = (char *)ptr;
+  
+  void *resized = malloc(new_size * sizeof(p_url[0]));
+  
+  mem_copy(resized, p_url, new_size * sizeof(p_url[0]));
+  
+  free(ptr);
+  
+  return resized;
 }
 
 #ifndef TESTING
